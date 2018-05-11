@@ -11,10 +11,10 @@ unsigned long long fibonaci(unsigned long long n) {
 	}
 	unsigned long long k = n / 2;
 	if (n % 2 == 0) {
-		return Fib[n] = (fibonaci(k) * fibonaci(k) + fibonaci(k - 1) * fibonaci(k - 1)) % 1000000007;
+		return Fib[n] = (fibonaci(k) * fibonaci(k) + fibonaci(k - 1) * fibonaci(k - 1)) % 100000007;
 	}
 	else {
-		return Fib[n] = (fibonaci(k) * fibonaci(k + 1) + fibonaci(k - 1) * fibonaci(k)) % 1000000007;
+		return Fib[n] = (fibonaci(k) * fibonaci(k + 1) + fibonaci(k - 1) * fibonaci(k)) % 100000007;
 	}
 }
 
@@ -24,7 +24,7 @@ int main() {
 	Fib[0] = 1;
 	Fib[1] = 1;
 	if (n == 0) {
-		cout << "0";
+		cout << "0"; // RTE
 	}
 	else {
 		cout << fibonaci(n - 1);
